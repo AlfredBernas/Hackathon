@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Enjoy The Page! :D
+        </title>
+        <link rel="icon" href="paw.png" sizes="100x100" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+          const nightText = "Night Mode";
+const dayText = "Day Mode";
+
+function toggleTheme(button) {
+    document.querySelector("body").classList.toggle('dark-mode');
+    button.classList.toggle("dark-mode");
+    if (button.textContent == nightText){
+        button.textContent = dayText;
+    }else {
+        button.textContent = nightText;
+    }
+}
+        </script>
+        <style>
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+* {font-family: Verdana, Arial;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #da4453;
+  position: fixed;
+  top: 0;
+  width: 100%;
+	z-index: 1;
+	transition: 3s;
+}
+
+li {
+  float: right;
+	transition: 3s;
+}
+
+li a, button {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  background-color:#da4453;
+  border: none;
+  font-size:12px;
+}
+
+li button { font-size:12px;
+}
+
+li a:hover {
+  color: #da4453;
+background-color:white;
+text-decoration:none;
+text-align: center;
+transition: 0.5s;
+}
+
+li button:hover {
+  color: #da4453;
+background-color:white;
+text-decoration:none;
+text-align: center;
+transition: 0.5s;
+cursor: pointer;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: black;
+	transition: 3s;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+	transition: 3s;
+}
+
+#border {height: 50px;
+  background-color: white;
+  color:#da4453;
+  padding-left:400px;
+  padding-top:40px;
+  padding-bottom:40px;
+  font-size:20px;
+	transition: 3s;
+}
+
+#border button {
+  border:1px solid #da4453;
+  background-color: white;
+  color:#da4453;
+  border-radius:10px;
+  font-size:17px;
+  padding:20px 50px;
+  transition:0.5s;
+}
+
+#border button:hover {
+  background-color: #da4453;
+  color:white;
+  transition:0.5s;
+  cursor: pointer;
+}
+
+.dark-mode #border {
+	background-color:   #0d0d0d;
+	transition: 3s;
+}
+
+.dark-mode #border button{
+	background-color:  #0d0d0d;
+	transition: 3s;
+}
+
+.dark-mode ul {
+	background-color:   #1a0000;;
+	transition: 3s;
+}
+
+.dark-mode footer {
+	background-color:   #1a0000;;
+	transition: 3s;
+}
+
+.dark-mode button {
+	background-color:   #1a0000;;
+}
+
+.dark-mode li {
+	background-color:   #1a0000;;
+	transition: 3s;
+}
+
+.dark-mode a {
+	background-color:   #1a0000;;
+	transition: 3s;
+}
+
+.dark-mode #content {
+	background-color:  #0d0d0d;
+	transition: 3s;
+}
+
+.dark-mode #content h2{
+	color:white;
+	transition: 3s;
+}
+
+.dark-mode #content p{
+	color:white;
+	transition: 3s;
+}
+
+.dark-mode #right {
+	background-color:  #0d0d0d;
+	transition: 3s;
+}
+
+.dark-mode #right p {
+	color:white;
+	transition: 3s;
+}
+
+footer {background-color:#da4453;
+         color:white;
+         padding:40px;
+				 text-align:center;
+				 clear:left;
+				 transition: 3s;
+         font-size:12px;
+}
+
+footer img {width:150px;
+						height:150px;
+}
+
+p a {color:white;
+					text-decoration: none;
+}
+
+p a:hover {text-decoration: underline;
+}
+
+.fa {  background-color: #da4453;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20%;
+	transition:0.5s;
+}
+
+.fa:hover {
+	background-image: none;
+  background-color: white;
+	color: #da4453;
+  border-radius: 50%;
+	transition:0.5s;
+}
+
+#content {
+  background-color: white;
+  width:40%;
+  display:inline-block;
+  margin-left:200px;
+}
+
+#content h2 {
+  margin:50px;
+  color:#444;
+}
+
+#content p {
+  margin:50px;
+  color:#6b6b6b;
+}
+
+#content button {
+  border:1px solid #da4453;
+  background-color: #da4453;
+  color:white;
+  border-radius:5px;
+  padding:15px 10px;
+  transition:0.5s;
+  float:right;
+  margin-right:50px;
+  margin-bottom:50px;
+}
+
+#content button:hover {
+  border:1px solid #444;
+  background-color: #444;
+  transition:0.5s;
+  cursor: pointer;
+}
+
+#space {
+  background-color: #f2f2f2;
+  height:50px;
+}
+
+#right {
+  background-color:white;
+  display:inline-block;
+  width:20%;
+  margin-left:30px;
+  padding:20px;
+}
+
+#right p{
+  color:#444;
+}
+
+#right img{
+  opacity:1.0;
+  border-radius:5px;
+  transition:0.5s;
+}
+
+#right img:hover{
+  opacity:0.5;
+  cursor: pointer;
+  transition:0.5s;
+}
+
+#right a{
+  font-size:12px;
+  text-decoration: none;
+  color:#da4453;
+  transition:0.5s;
+}
+
+#right a:hover{
+  color:#d9d9d9;
+  transition:0.5s;
+}
+
+        </style>
+    </head>
+    <body class="animate-bottom">
+
+        <ul>
+          <li style="float:left;margin-left:200px;padding:10px;"><img src='raseflag.png' width='170px'/></li>
+            <li><button style="margin-right:300px;" button onclick="toggleTheme(this)">Night Mode</button></li>
+            <li><a href='#'>Shop</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Games</a></li>
+            <li><a href='#'>Gallery</a></li>
+            <li><a href='#'>Home</a></li>
+          </ul>
+
+          <br><br><br><br>
+
+        <video width="100%" height="100%" controls>
+            <source src="pickly.mp4" type="video/mp4">
+            <source src="pickly.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+
+          <div id="border">Do you want to view our latest products?
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button>Visit Shop</button>
+          </div>
+
+          <br>
+
+          <div id="content">
+            <img src="puffer2.jpg" width="100%"/>
+            <h2>Raising Endangered Species</h2>
+            <p>RASE Pets has been working with WWF to help repopulate fish species such as the Dwarf Puffer in India.</p>
+            <button>Read More</button>
+
+            <br><br><br><br><br>
+
+          <div id="space"></div>
+
+            <img src="cats.jpg" width="100%"/>
+            <h2>Stray Cats For Adoption</h2>
+            <p>We have rescued over 100 cats and are currently available for adoption. Our cats have been groomed and cured of illnesses.</p>
+            <button>Read More</button>
+          </div>
+
+          <div id="right">
+            <p>Popular Posts</p>
+            <a href="#"><img style="float:left;margin-right:10px;" src="dog.jpg" width="50px"/>
+            Dog Owners Learn How to Train Their Dogs Through Our Training Programme</a>
+
+            <br><br>
+            
+            <p></p>
+            <a href="#"><img style="float:left;margin-right:10px;" src="carabao.jpg" width="50px"/>
+            Learn How RASE Pets Is Currently Supporting Farms In The Philippines</a>
+
+            <br><br>
+
+            <p></p>
+            <a href="#"><img style="float:left;margin-right:10px;" src="goose.jpg" width="50px"/>
+            Goose Rehabilitates In RASE Farms, One of The First Animals In Our Farms</a>
+
+            <br><br>
+
+            <p></p>
+            <a href="#"><img style="float:left;margin-right:10px;" src="logopuffer.jpg" width="50px"/>
+            The World's Smallest Puffer Fish Is Now On Sale In Pet Stores</a>
+
+            <br><br>
+
+
+            <p>Advertisements</p>
+            <a href="#">
+              <img width="100%" height="40%" src="plant.JPG"/>
+            </a>
+
+            <a href="#">
+              <img width="100%" height="40%" src="spiderman.JPG"/>
+            </a>
+
+            
+
+          </div>
+
+          <br><br>
+
+          <footer>
+            <p><a href='#'>Home</a></p>
+            <p><a href='#'>Gallery</a></p>
+            <p><a href='#'>Games</a></p>
+            <p><a href='#'>About</a></p>
+            <p><a href='#'>Shop</a></p>
+            <a href='#' class='fa fa-facebook'></a><a href='#' class='fa fa-twitter'></a><a href='#' class='fa fa-instagram'></a>
+          <p>RASE Pets is a fictional pet store.</p>
+          </footer>
+
+    </body>
+</html>

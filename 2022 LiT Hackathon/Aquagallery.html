@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aquarius - Gallery</title>
+<link rel='stylesheet' href='aqua.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel = "icon" href = "../media/logo.png" type = "image/x-icon">
+<style>#card {  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin:5%;
+	margin-left: 8%;
+  text-align: center;
+	float:left;
+}
+
+#card img {	width:280px;
+						height:280px;
+						margin:10px;
+						transition: 1s;
+}
+
+#card img:hover {
+					 				box-shadow: 0px 0px 5px 5px #0099ff;
+					 				transition: 1s;
+}
+
+#card .text {transition: 0.5s;
+}
+
+#card .text:hover {
+								color:#0099ff;
+								transition: 0.5s;
+}
+</style>
+<script src='aqua.js'></script>
+<script src='jquery-3.5.1.min.js'></script>
+<script src="jquery.mfancytitle-0.4.1.min.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+    $.mFancyTitle({
+        mftMissYou: true, // document title and favicon(s) will change when the user leaves your page and open another tab in the browser
+        mftMissYouTitle: 'Hey! Where did you go?',
+        mftTitleBlink: [false, true], // Text blinks. Will not run if marquee runs. First array value determines whether it runs when the user is in the webpage, second value determines whether it runs when user is in another page.
+        mftTitleMarquee: [false, true], // Marquee moves the text.
+        mftMissYouFavicon: {
+            'apple-touch-icon-precomposed': '../media/fry2.png', // General use iOS/Android icon, auto-downscaled by devices
+            'icon': '../media/fry2.png', // Icon for any desktop browser except IE
+            'shortcut icon': '../media/fry2.png' // Default required by IE. Chrome and Safari may pick ico over png
+        }
+    });
+});
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+
+  <h1>See Some Cool Photographs!</h1>
+
+<div id='card'>
+  <img src='../media/logopuffer.jpg' alt='Image of Dwarf Puffer' title='Ello!'>
+  <p class='text'>Dwarf Puffer</p>
+  <p class="material-icons" onclick="heartClick(this)">&#xe87d;</p>
+  <div id="comment">
+  Comment below:
+  </div>
+  <form>
+  <textarea id="inputSrc">
+  </textarea>
+  <input id='post' class='material-icons' type="button" value="&#xe31b;" onclick='postComment()'/>
+  </form>
+</div>
+
+<div id='card'>
+  <img src='../media/castle.jpg' alt='Image of Castle with Moss' title='Who lives in the castle?'>
+  <p class='text'>Castle With Moss</p>
+  <p class="material-icons" onclick="heartClick(this)">&#xe87d;</p>
+  <div id="comment2">
+  Comment below:
+  </div>
+  <form>
+  <textarea id="inputSrc2">
+  </textarea>
+  <input id='post' class='material-icons' type="button" value="&#xe31b;" onclick='postComment2()'/>
+  </form>
+</div>
+
+</body>
+</html>
